@@ -1,0 +1,84 @@
+body{
+	background-color: #232323;
+	margin:0;
+	font-family: "Avenir","Montserrat"; /* if Avenir doesn't work then monteserrat*/
+}
+
+/*
+There are 3 images in our example, each taking 30% (30% * 3 images = 90%). 
+Each image has margins around it (including left and right). 
+Images side margin can be next to the other images side margin. 
+So we count the margins on the two sides of the images * 3 images = 6 margins total. 
+We divide the remaining 10% that is left with 6 and get  roughly 1.66%.
+*/
+.square{
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%; /* When you specify the height or width as a percentage, that's a percentage with respect to the element's parent*/
+	float: left;
+	margin:1.66%;
+	border-radius: 15%;
+	transition: background 0.6s;
+	/* Make transition support all browsers*/
+	-webkit-transition: background 0.6s; /*Safari */
+	-moz-transition: background 0.6s; /*Mozilla */
+}
+
+#container{
+	margin:20px auto; /* 0 margin top-bottom and auto from left-right i.e same size either side --> center allign */
+	max-width:600px;
+}
+
+h1{
+	color:white;
+	text-align: center;
+	background: steelblue;
+	margin:0;
+	font-weight: normal;
+	text-transform: uppercase; /* transforms text to upper case*/
+	line-height: 1.1;
+	/* padding: 20 0*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#stripe{
+	background: white;
+	height: 30px;
+	text-align: center;
+	color:black;
+}
+
+.selected{
+	background-color:steelblue;
+	color:white;
+}
+
+#colorDisplay{
+	font-size: 200%;
+}
+
+button {
+	border:none;
+	background:none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color:steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	transition: all 0.5s; /*(what properties and how much time) so all properties takes 2.0 time to transition */ 
+	-webkit-transition: all 0.5s; /*Safari */
+	-moz-transition: all 0.5s; /*Mozilla */
+	outline: null;
+}
+
+button:hover{
+	color:white;
+	background-color: steelblue;
+}
+
+#message{
+	display: inline-block; 
+	width: 20%;
+}
